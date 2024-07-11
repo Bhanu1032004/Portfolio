@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2 Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000; /* Black background */
+            color: #fff; /* White text color */
+            padding: 20px;
+            box-sizing: border-box;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            font-family: 'Open Sans', sans-serif; /* Use Open Sans font */
+        }
+
+        .content {
+            max-width: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .video-container {
+            width: 45%;
+            max-width: 300px; /* Adjusted for mobile view */
+            margin-right: 20px;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+        }
+
+        .description {
+            width: 45%;
+            max-width: 600px;
+        }
+
+        .close-btn {
+            position: absolute;
+            color: #fff;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .close-btn.white {
+            color: #fff; /* White color for project 2 */
+        }
+        .close-btn:hover {
+            color: #ccc; /* Light grey color on hover */ 
+        }
+    </style>
+    <script>
+        function closeProjectDetails() {
+            // Navigate back to the main projects page
+            window.location.href = 'index.html'; // Replace with the actual URL of your main projects page
+        }
+    </script>
+</head>
+<body>
+    <div class="content">
+        <div class="video-container">
+            <video controls>
+                <source src="https://drive.google.com/uc?export=download&id=1ECr6rDP8vdMvge-66e3B1AdZDhyquKtB" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+            <div class="description">
+            <h1>Anti-Theft System For Vehicles</h1>
+            <b>Project Overview:</b>
+            <p>I developed an advanced anti-theft system for vehicles, integrating robust UI/UX design using Figma for intuitive navigation and engaging visuals. The frontend utilized HTML, CSS, and JavaScript for real-time tracking and mapping, ensuring accurate and responsive location data. I enhanced security measures with a K-Nearest Neighbors (KNN) machine learning model, showcasing my proficiency in both frontend development and backend integration for comprehensive application functionality.</p>
+            <b>Frontend Tools:</b><br>
+            UI/UX Design: Figma<br>
+            Web Technologies: HTML, CSS, JavaScript<br>
+            Mapping Integration: Real-time map integration using JavaScript libraries<br>
+            <b>Backend Tools:</b><br>
+            Machine Learning: K-Nearest Neighbors (KNN) algorithm for predictive analysis<br>
+        </div>
+    </div>
+</body>
+</html>

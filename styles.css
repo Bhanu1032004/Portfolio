@@ -1,0 +1,398 @@
+/* General styles */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff; /* Default background color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  scroll-behavior: smooth;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background-color: #fff; /* Header background color */
+  box-shadow: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.nav-buttons a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #d3d3d3;
+  font-size: 18px;
+  transition: transform 0.3s, color 0.3s;
+  display: inline-block;
+}
+
+.nav-buttons a:hover {
+  color: #333333;
+  transform: scale(1.1) translateY(-2px); /* Bulge effect on hover */
+}
+
+/* Home section styles */
+
+section#home {
+  width: 100%;
+  padding: 100px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: background-color 0.5s ease;
+  background-color: #fff; /* Background color for home page */
+}
+
+.photo-section {
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-section {
+  width: 50%;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+  padding-top: 100px;
+  padding-left: 90px;
+}
+
+.text-section h1 {
+  font-size: 42px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.text-section p {
+  font-size: 20px;
+  color: #555;
+  margin: 10px 0;
+}
+
+.photo-frame {
+  width: 300px;
+  height: 300px;
+  background-color: #e0e0e0;
+  border: 2px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-frame-back {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  z-index: -1;
+}
+
+/* Projects section styles */
+
+section#projects {
+  width: 100%;
+  padding: 120px 50px; /* Increased padding for top and bottom */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: background-color 0.5s ease;
+  background-color: #f2f2f2; /* Light grey background color for projects page */
+}
+
+.projects-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%; /* Adjusted width to center the boxes */
+  max-width: 1200px;
+  margin: 80px auto 0; /* Increased margin to center vertically and create space */
+}
+
+.project-item {
+  width: 30%; /* Adjusted width for three boxes to fit within 100% width */
+  height: 350px; /* Increased height for slightly larger boxes */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  margin-bottom: 40px; /* Increased space between boxes */
+}
+
+.project-item img {
+  width: 100%;
+  height: 60%; /* Adjusted height */
+  object-fit: cover;
+}
+
+.project-description {
+  padding: 10px 20px; /* Reduced padding */
+  text-align: center;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff; /* Default white background for the project detail page */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1000;
+}
+
+.project-overlay.black-bg {
+  background: #000; /* Black background for the second project */
+}
+
+.project-overlay .content {
+  width: 80%;
+  height: 80%;
+  position: relative;
+  padding: 20px;
+  overflow: auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px; /* Changed to the right side */
+  font-size: 24px;
+  color: #000;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.close-btn.white {
+  color: #fff; /* White color for project 2 */
+}
+
+.close-btn:hover {
+  color: #ccc; /* Light grey color on hover */
+}
+
+.left-align {
+  text-align: left;
+}
+
+/* Experience section styles */
+
+section#experience {
+  width: 100%;
+  padding: 100px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: background-color 0.5s ease;
+  background-color: #fff; /* Background color for experience page */
+  clip-path: ellipse(75% 100% at 50% 0%);
+}
+
+.timeline-container {
+  display: flex;
+  width: 80%;
+  height: 80%;
+  background-color: transparent; /* Ensure no background color */
+}
+
+.timeline {
+  width: 30%;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  text-align: left;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0; /* Position the line to the left */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #ccc;
+}
+
+.timeline-item {
+  padding: 20px;
+  margin: 40px 0;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align the items to the left */
+  text-align: left; /* Keep text alignment to the left */
+}
+
+.timeline-item:hover {
+  background-color: #dcdcdc;
+}
+
+.timeline-item h3 {
+  margin: 0 0 0 20px; /* Adjust margin to keep headings in place */
+  font-size: 1.1em;
+}
+
+.timeline-item .circle {
+  width: 12px;
+  height: 12px;
+  background-color: #333;
+  border-radius: 50%;
+  position: absolute;
+  left: 0; /* Position dots to the left */
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content {
+  width: 70%;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  background-color: transparent; /* Ensure no background color */
+}
+
+.macbook {
+  position: relative;
+  width: 100%;
+  height: 130%;
+  background: url('macbook.png') no-repeat center center;
+  background-size: contain;
+}
+
+.screen {
+  position: absolute;
+  top: 23%;
+  left: 11%;
+  width: 78%;
+  height: 50%;
+  overflow: hidden;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+.content-item {
+  display: none;
+  text-align: center; /* Center text within content items */
+  font-size: 15px;
+}
+
+.content-item.active {
+  display: block;
+}
+
+.timeline-item.active ~ .timeline-item::before {
+  background-color: #333;
+}
+
+/* Contact section styles */
+
+section#contact {
+  width: 100%;
+  padding: 100px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: background-color 0.5s ease;
+  background-color: #333; /* Dark grey background color for contact page */
+  color: #fff; /* White text color for contact page */
+}
+
+/* General styles for close button */
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px; /* Changed to the right side */
+  font-size: 24px;
+  color: #000;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.close-btn.white {
+  color: #fff; /* White color for project 2 */
+}
+
+.close-btn:hover {
+  color: #ccc; /* Light grey color on hover */
+}
+
+/* Animation for fog effect on home page */
+
+.fog {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(240, 240, 240, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  animation: fogEffect 1s forwards;
+}
+
+@keyframes fogEffect {
+  0% {
+      opacity: 1;
+      transform: scale(0);
+  }
+  100% {
+      opacity: 0;
+      transform: scale(5);
+  }
+}
+
+/* contact page */
+section#contact {
+  color: lightgrey; /* Light grey text color */
+}
+
+section#contact a {
+  color: lightgrey; /* Light grey link color */
+}
